@@ -28,10 +28,7 @@ jobs:
 
       # Passo 4: Rodar análise de código com SonarCloud
       - name: SonarCloud Scan
-        uses: sonarsource/sonarcloud-github-action@v2
-        with:
-          projectKey: evandrocustodio_uf-cicd-calcjs-evandro
-          organization: evandrocustodio
+        uses: SonarSource/sonarcloud-github-action@master
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
