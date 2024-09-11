@@ -25,27 +25,27 @@ jobs:
       - name: Run tests
         run: npm test
 
-publish:
-    runs-on: ubuntu-latest
-    needs: build
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    steps:
-      # Passo 1: Fazer checkout do código
-      - name: Check out the repository
-        uses: actions/checkout@v3
-
-      # Passo 2: Instalar o Node.js
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16'
-
-      # Passo 3: Autenticar no NPM
-      - name: Authenticate to npm
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
-          
-      # Passo 4: Publicar no npm, se a versão tiver sido incrementada
-      - name: Publish to npm
-        run: npm publish
-        
+    publish:
+        runs-on: ubuntu-latest
+        needs: build
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        steps:
+          # Passo 1: Fazer checkout do código
+          - name: Check out the repository
+            uses: actions/checkout@v3
+    
+          # Passo 2: Instalar o Node.js
+          - name: Set up Node.js
+            uses: actions/setup-node@v3
+            with:
+              node-version: '16'
+    
+          # Passo 3: Autenticar no NPM
+          - name: Authenticate to npm
+            run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+              
+          # Passo 4: Publicar no npm, se a versão tiver sido incrementada
+          - name: Publish to npm
+            run: npm publish
+            
         
