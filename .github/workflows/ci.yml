@@ -30,8 +30,8 @@ jobs:
       - name: SonarCloud Scan
         uses: sonarsource/sonarcloud-github-action@v2
         with:
-          projectKey: <your-project-key>
-          organization: <your-organization-key>
+          projectKey: evandrocustodio_uf-cicd-calcjs-evandro
+          organization: evandrocustodio
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
