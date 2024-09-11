@@ -1,0 +1,11 @@
+{
+  "name": "uf-cicd-calcjs-evandro",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
