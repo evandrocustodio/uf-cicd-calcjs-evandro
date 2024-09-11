@@ -1,6 +1,15 @@
+ // Função de adição
+    function add(a, b) {
+        return a + b;
+    }   
+
 // Função de subtração
     function subtract(a, b) {
         return a - b;
+    }
+// Função de potenciação
+    function power(base, exponent) {
+        return Math.pow(base, exponent);
     }
 
     function divide(a, b) {
@@ -14,6 +23,7 @@
     module.exports = {
         add,
         subtract,
-        divide
-
+      multiply,
+      divide,
+      power
     };
