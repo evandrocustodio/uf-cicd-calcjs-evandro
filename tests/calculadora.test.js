@@ -1,4 +1,4 @@
-const { add, subtract, multiply, divide, power } = require('./calculadora');
+const { add, subtract, multiply, divide, power } = require('../src/calculadora');
 
 describe('Funções Matemáticas Básicas', () => {
   
